@@ -24,7 +24,7 @@ Clone o repositório:
 sh
 # Copiar código
 git clone [[https://github.com/OrlandoSD/Cadastro-de-dados.git]](https://github.com/OrlandoSD/Cadastro-de-dados.git)
-cd RadioCadastro
+Cadastro de Dados
 Instale as dependências:
 
 sh
