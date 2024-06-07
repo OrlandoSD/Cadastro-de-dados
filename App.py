@@ -1,6 +1,6 @@
 from tkinter import *
 from tkinter import messagebox
-import openpyxl
+import openpyxl, xlrd
 import pathlib
 from openpyxl import Workbook
 import customtkinter as ctk
@@ -40,30 +40,30 @@ class App(ctk.CTk):
 
         # Entrys
         self.name_entry = ctk.CTkEntry(self, width=350, textvariable=self.name_value, font=("Century Gothic bold", 16), fg_color="transparent")
-        self.contact_entry = ctk.CTkEntry(self, width=350, textvariable=self.contact_value, font=("Century Gothic bold", 16), fg_color="transparent")
-        self.age_entry = ctk.CTkEntry(self, width=350, textvariable=self.age_value, font=("Century Gothic bold", 16), fg_color="transparent")
-        self.address_entry = ctk.CTkEntry(self, width=350, textvariable=self.address_value, font=("Century Gothic bold", 16), fg_color="transparent")
+        self.contact_entry = ctk.CTkEntry(self, width=200, textvariable=self.contact_value, font=("Century Gothic bold", 16), fg_color="transparent")
+        self.age_entry = ctk.CTkEntry(self, width=150, textvariable=self.age_value, font=("Century Gothic bold", 16), fg_color="transparent")
+        self.address_entry = ctk.CTkEntry(self, width=200, textvariable=self.address_value, font=("Century Gothic bold", 16), fg_color="transparent")
          
         # Combobox
         self.gender_combobox = ctk.CTkComboBox(self, values=["Operando", "Em manutenção"], font=("Century Gothic bold", 14), width=150)
-        self.gender_combobox.set("Masculino")
+        self.gender_combobox.set("Operando")
          
-        self.obs_entry = ctk.CTkTextbox(self, width=450, height=150, font=("arial", 18), border_color="#aaa", border_width=2, fg_color="transparent")
+        self.obs_entry = ctk.CTkTextbox(self, width=750, height=150, font=("arial", 18), border_color="#aaa", border_width=2, fg_color="transparent")
          
         # Labels
-        self.lb_name = ctk.CTkLabel(self, text="Modelo do Rádio", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=50, y=120)
-        self.lb_contact = ctk.CTkLabel(self, text="Contato da Inspetoria", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=50, y=170)
+        self.lb_name = ctk.CTkLabel(self, text="Modelo do Rádio", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=30, y=120)
+        self.lb_contact = ctk.CTkLabel(self, text="Contato da Inspetoria", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=55, y=170)
         self.lb_age = ctk.CTkLabel(self, text="Serial do Rádio", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=50, y=220)
-        self.lb_gender = ctk.CTkLabel(self, text="Status do Rádio", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=50, y=270)
+        self.lb_gender = ctk.CTkLabel(self, text="Status do Rádio", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=100, y=270)
         self.lb__address = ctk.CTkLabel(self, text="Local da Inspetoria", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=50, y=320)
-        self.lb_obs = ctk.CTkLabel(self, text="Observação", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=50, y=370)
+        self.lb_obs = ctk.CTkLabel(self, text="Observação", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=90, y=250)
         
         # Botões
         self.btn_submit = ctk.CTkButton(self, text="Salvar dados".upper(), command=self.submit, fg_color="#151", hover_color="#131").place(x=300, y=420)
         self.btn_clear = ctk.CTkButton(self, text="Limpar Campos".upper(), command=self.clear, fg_color="#555", hover_color="#333").place(x=500, y=420)
         
         # Posicionando os elementos na janela
-        self.name_entry.place(x=50, y=150)
+        self.name_entry.place(x=30, y=150)
         self.contact_entry.place(x=50, y=200)
         self.age_entry.place(x=50, y=250)
         self.gender_combobox.place(x=50, y=300)
