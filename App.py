@@ -48,27 +48,27 @@ class App(ctk.CTk):
         self.gender_combobox = ctk.CTkComboBox(self, values=["Operando", "Em manutenção"], font=("Century Gothic bold", 14), width=150)
         self.gender_combobox.set("Operando")
          
-        self.obs_entry = ctk.CTkTextbox(self, width=750, height=150, font=("arial", 18), border_color="#aaa", border_width=2, fg_color="transparent")
+        self.obs_entry = ctk.CTkTextbox(self, width=500, height=150, font=("arial", 18), border_color="#aaa", border_width=2, fg_color="transparent")
          
         # Labels
-        self.lb_name = ctk.CTkLabel(self, text="Modelo do Rádio", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=30, y=120)
-        self.lb_contact = ctk.CTkLabel(self, text="Contato da Inspetoria", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=55, y=170)
-        self.lb_age = ctk.CTkLabel(self, text="Serial do Rádio", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=50, y=220)
-        self.lb_gender = ctk.CTkLabel(self, text="Status do Rádio", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=100, y=270)
-        self.lb__address = ctk.CTkLabel(self, text="Local da Inspetoria", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=50, y=320)
-        self.lb_obs = ctk.CTkLabel(self, text="Observação", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=90, y=250)
+        self.lb_name = ctk.CTkLabel(self, text="Modelo do Rádio", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=50, y=220)
+        self.lb_contact = ctk.CTkLabel(self, text="Contato da Inspetoria", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=50, y=90)
+        self.lb_age = ctk.CTkLabel(self, text="Serial do Rádio", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=50, y=150)
+        self.lb_gender = ctk.CTkLabel(self, text="Status do Rádio", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=300, y=150)
+        self.lb__address = ctk.CTkLabel(self, text="Local da Inspetoria", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=450, y=90)
+        self.lb_obs = ctk.CTkLabel(self, text="Observação", font=("Century Gothic bold", 16), text_color=["#000","#fff"]).place(x=270, y=250)
         
         # Botões
-        self.btn_submit = ctk.CTkButton(self, text="Salvar dados".upper(), command=self.submit, fg_color="#151", hover_color="#131").place(x=300, y=420)
-        self.btn_clear = ctk.CTkButton(self, text="Limpar Campos".upper(), command=self.clear, fg_color="#555", hover_color="#333").place(x=500, y=420)
+        self.btn_submit = ctk.CTkButton(self, text="Salvar dados".upper(), command=self.submit, fg_color="#151", hover_color="#131").place(x=300, y=450)
+        self.btn_clear = ctk.CTkButton(self, text="Limpar Campos".upper(), command=self.clear, fg_color="#555", hover_color="#333").place(x=500, y=450)
         
         # Posicionando os elementos na janela
-        self.name_entry.place(x=30, y=150)
-        self.contact_entry.place(x=50, y=200)
-        self.age_entry.place(x=50, y=250)
-        self.gender_combobox.place(x=50, y=300)
-        self.address_entry.place(x=50, y=350)
-        self.obs_entry.place(x=190, y=260)
+        self.name_entry.place(x=50, y=120)
+        self.contact_entry.place(x=50, y=250)
+        self.age_entry.place(x=50, y=185)
+        self.gender_combobox.place(x=300, y=180)
+        self.address_entry.place(x=450, y=120)
+        self.obs_entry.place(x=230, y=285)
     
     def submit(self):
         ficheiro = pathlib.Path("Clientes.xlsx")
