@@ -1,10 +1,10 @@
 # Sistema de Cadastro de Rádio 
-### Este projeto é um sistema de cadastro desenvolvido para a Guarda Civil Metropolitana de São Paulo (GCM-SP). O sistema permite a gestão de informações sobre os rádios utilizados pelos agentes da GCM, incluindo modelo, contato da inspetoria, serial do rádio, status, local da inspetoria e observações adicionais.
+### Este projeto é um sistema de cadastro. O sistema permite a gestão de informações sobre os rádios utilizados, incluindo modelo, contato, serial do rádio, status, local da e observações adicionais.
 
 # Funcionalidades
 Tema Customizável: O sistema permite alternar entre temas claro, escuro e sistema.
 Interface Intuitiva: Interface gráfica amigável utilizando CustomTkinter.
-Entrada de Dados: Formulário para inserir detalhes como modelo do rádio, contato da inspetoria, serial do rádio, status, local da inspetoria e observações.
+Entrada de Dados: Formulário para inserir detalhes como modelo do rádio, contato, serial do rádio, status, local e observações.
 Salvar Dados: Salvamento dos dados inseridos em um arquivo Excel (Clientes.xlsx).
 Limpar Campos: Botão para limpar todos os campos do formulário.
 Validação Simples: Verificação básica para garantir que todos os campos estão preenchidos.
